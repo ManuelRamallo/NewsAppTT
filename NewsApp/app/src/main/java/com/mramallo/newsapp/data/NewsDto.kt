@@ -8,5 +8,5 @@ data class NewsDto(
     @Json(name = "description") val description: String?,
     @Json(name = "author") val author: String?,
     @Json(name = "url") val url: String,
-    @Json(name = "urlToImage") val urlToImage: String,
+    @Json(name = "urlToImage") val urlToImage: String?,
 )

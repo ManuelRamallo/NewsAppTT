@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mramallo.newsapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".NewsApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,11 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsApp"
         tools:targetApi="31">
-        <activity
-            android:name=".NewsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_news"
-            android:theme="@style/Theme.NewsApp" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

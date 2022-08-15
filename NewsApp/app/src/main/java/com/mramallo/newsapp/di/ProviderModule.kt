@@ -1,6 +1,7 @@
 package com.mramallo.newsapp.di
 
 import com.mramallo.newsapp.data.api.NewsApi
+import com.mramallo.newsapp.data.repository.NewsRepository
 import com.mramallo.newsapp.utils.Constants.URL_BASE
 import dagger.Module
 import dagger.Provides
@@ -29,5 +30,10 @@ class ProviderModule {
     fun provideNewsApi(retrofit: Retrofit): NewsApi {
         return retrofit.create(NewsApi::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideNewsRepository(newsApi: NewsApi): NewsRepository = NewsRepository(newsApi)
+
 
 }
